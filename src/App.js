@@ -8,7 +8,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 7px 10px;
-  background: red;
+  background: ${props => (props.primary ? 'red' : 'green')};
   color: #fff;
   &:hover{
     background: blue;
@@ -21,7 +21,7 @@ function App() {
       <h1>Styled Components</h1>
       <form action="">
         <input type="text"/>
-        <Button>Create</Button>
+        <Button primary>Create</Button>
       </form>
     </div>
   );
