@@ -10,6 +10,9 @@ const Button = styled.button`
   padding: 7px 10px;
   background: red;
   color: #fff;
+  &:hover{
+    background: blue;
+  }
 `
 
 function App() {
