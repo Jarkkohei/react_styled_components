@@ -1,6 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import './App.css';
+
+const theme = {
+  primary: 'teal',
+  secondary: 'green',
+}
 
 const Button = styled.button`
   font-family: sans-serif;
@@ -8,7 +13,8 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 7px 10px;
-  background: ${props => (props.primary ? 'red' : 'green')};
+  /*background: ${props => (props.primary ? 'red' : 'green')};*/
+  background: ${props => props.theme.primary};
   color: #fff;
   &:hover{
     background: blue;
@@ -17,13 +23,15 @@ const Button = styled.button`
 
 function App() {
   return (
-    <div className="App">
-      <h1>Styled Components</h1>
-      <form action="">
-        <input type="text"/>
-        <Button primary>Create</Button>
-      </form>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <h1>Styled Components</h1>
+        <form action="">
+          <input type="text" />
+          <Button primary>Create</Button>
+        </form>
+      </div>
+    </ThemeProvider>
   );
 }
 
