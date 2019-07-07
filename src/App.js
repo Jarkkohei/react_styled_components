@@ -1,6 +1,8 @@
 import React from 'react';
-import styled, { ThemeProvider, css } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import './App.css';
+
+import Button from './elements/Button';
 
 const theme = {
   primary: 'teal',
@@ -8,25 +10,6 @@ const theme = {
   alert: 'yellow',
   font: 'sans-serif',
 }
-
-const Button = styled.button`
-  font-family: ${props => props.theme.font};
-  font-size: 1.3rem;
-  border: none;
-  border-radius: 5px;
-  padding: 7px 10px;
-  /*background: ${props => (props.primary ? 'red' : 'green')};*/
-  /*background: ${props => props.theme.primary};*/
-  ${props => props.color && 
-    css`
-      background: ${props => props.theme[props.color]};
-    `
-  }
-  color: #fff;
-  &:hover{
-    background: blue;
-  }
-`
 
 const H1 = styled.h1`
   font-family: ${props => props.theme.font};
