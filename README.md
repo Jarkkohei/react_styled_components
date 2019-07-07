@@ -27,7 +27,7 @@ npm install
 
 Run the development server at [http://localhost:3000](http://localhost:3000)
 ```bash
-npm run watch
+npm start
 ```
 
 ---
