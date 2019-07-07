@@ -21,11 +21,15 @@ const Button = styled.button`
   }
 `
 
+const H1 = styled.h1`
+  font-size: 3rem;
+`
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <h1>Styled Components</h1>
+        <H1>Styled Components</H1>
         <form action="">
           <input type="text" />
           <Button primary>Create</Button>
