@@ -5,10 +5,11 @@ import './App.css';
 const theme = {
   primary: 'teal',
   secondary: 'green',
+  font: 'sans-serif',
 }
 
 const Button = styled.button`
-  font-family: sans-serif;
+  font-family: ${props => props.theme.font};
   font-size: 1.3rem;
   border: none;
   border-radius: 5px;
@@ -22,6 +23,7 @@ const Button = styled.button`
 `
 
 const H1 = styled.h1`
+  font-family: ${props => props.theme.font};
   font-size: 3rem;
 `
 
